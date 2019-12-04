@@ -7,20 +7,20 @@ import { DataStructureFactory } from "../lib/DataStructureFactory";
 describe("Data structures", () => {
     describe("Queue", () => {
         it("has size", () => {
-            const queue = new Queue();
+            const queue = DataStructureFactory.create(DataStructures.Queue);
             const result = queue.size();
             expect(result).to.equal(0);
         })
 
         it("add object", () => {
-            const queue = new Queue();
+            const queue = DataStructureFactory.create(DataStructures.Queue);
             queue.enqueue("object");
             const result = queue.size();
             expect(result).to.equal(1);
         });
         
         it("get last added object", () => {
-            const queue = new Queue();
+            const queue = DataStructureFactory.create(DataStructures.Queue);
             queue.enqueue("object1");
             queue.enqueue("object2");
             queue.enqueue("object3");
@@ -29,7 +29,7 @@ describe("Data structures", () => {
         });
         
         it("poll item from queue", () => {
-            const queue = new Queue();
+            const queue = DataStructureFactory.create(DataStructures.Queue);
             queue.enqueue("object1");
             queue.enqueue("object2");
             queue.enqueue("object3");
@@ -42,7 +42,7 @@ describe("Data structures", () => {
         });
 
         it("add object, remove it afterwards and check if empty", () => {
-            const queue = new Queue();
+            const queue = DataStructureFactory.create(DataStructures.Queue);
             queue.enqueue("object1");
             queue.poll();
             const result = queue.isEmpty();
@@ -50,7 +50,7 @@ describe("Data structures", () => {
         });
 
         it("add object and check if empty", () => {
-            const queue = new Queue();
+            const queue = DataStructureFactory.create(DataStructures.Queue);
             queue.enqueue("object1");
             const result = queue.isEmpty();
             expect(result).to.equal(false);
@@ -59,20 +59,20 @@ describe("Data structures", () => {
 
     describe("Stack", () => {
         it("has size", () => {
-            const queue = new Stack();
+            const queue = DataStructureFactory.create(DataStructures.Stack);;
             const result = queue.size();
             expect(result).to.equal(0);
         })
 
         it("add object", () => {
-            const queue = new Stack();
+            const queue = DataStructureFactory.create(DataStructures.Stack);;
             queue.enqueue("object");
             const result = queue.size();
             expect(result).to.equal(1);
         });
         
         it("get last added object", () => {
-            const queue = new Stack();
+            const queue = DataStructureFactory.create(DataStructures.Stack);;
             queue.enqueue("object1");
             queue.enqueue("object2");
             queue.enqueue("object3");
@@ -81,7 +81,7 @@ describe("Data structures", () => {
         });
         
         it("poll item from queue", () => {
-            const queue = new Stack();
+            const queue = DataStructureFactory.create(DataStructures.Stack);;
             queue.enqueue("object1");
             queue.enqueue("object2");
             queue.enqueue("object3");
@@ -94,7 +94,7 @@ describe("Data structures", () => {
         });
 
         it("add object, remove it afterwards and check if empty", () => {
-            const queue = new Stack();
+            const queue = DataStructureFactory.create(DataStructures.Stack);;
             queue.enqueue("object1");
             queue.poll();
             const result = queue.isEmpty();
@@ -102,7 +102,7 @@ describe("Data structures", () => {
         });
 
         it("add object and check if empty", () => {
-            const queue = new Stack();
+            const queue = DataStructureFactory.create(DataStructures.Stack);
             queue.enqueue("object1");
             const result = queue.isEmpty();
             expect(result).to.equal(false);
