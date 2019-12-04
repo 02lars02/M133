@@ -37,6 +37,21 @@ describe("Data structures", () => {
             expect(indexZero).to.equal("object2");
             expect(size).to.equal(2);
         });
+
+        it("add object, remove it afterwards and check if empty", () => {
+            const queue = new Queue();
+            queue.enqueue("object1");
+            queue.poll();
+            const result = queue.isEmpty();
+            expect(result).to.equal(true);
+        });
+
+        it("add object and check if empty", () => {
+            const queue = new Queue();
+            queue.enqueue("object1");
+            const result = queue.isEmpty();
+            expect(result).to.equal(false);
+        });
     })
 
     // describe("Factory", () => {

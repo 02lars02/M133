@@ -23,4 +23,12 @@ export class Queue implements IDataScructure {
         }
         return oldQueue[0];
     }
+
+    public isEmpty(): boolean {
+        if(this.queue.length == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
