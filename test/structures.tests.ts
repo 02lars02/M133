@@ -15,6 +15,16 @@ describe("Data structures", () => {
             const result = queue.size();
             expect(result).to.equal(1);
         });
+
+        
+        it("get last added object", () => {
+            const queue = new Queue();
+            queue.add("object1");
+            queue.add("object2");
+            queue.add("object3");
+            const result = queue.peek();
+            expect(result).to.equal("object3");
+        });
     })
 
     // describe("Factory", () => {

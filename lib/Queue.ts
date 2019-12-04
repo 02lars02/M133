@@ -10,4 +10,9 @@ export class Queue implements IDataScructure {
     public add(object: any): void {
         this.queue.push(object);
     }
+
+    public peek(): any {
+        const lastIndex = this.queue.length - 1;
+        return this.queue[lastIndex];
+    }
 }
