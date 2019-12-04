@@ -14,4 +14,13 @@ export class Queue implements IDataScructure {
     public peek(): any {
         return this.queue[0];
     }
+
+    public poll(): any {
+        const oldQueue = this.queue;
+        this.queue = [];
+        for(let index = 1; index < oldQueue.length; index++) {
+            this.enqueue(oldQueue[index]);
+        }
+        return oldQueue[0];
+    }
 }

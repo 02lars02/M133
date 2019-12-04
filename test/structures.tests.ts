@@ -24,6 +24,19 @@ describe("Data structures", () => {
             const result = queue.peek();
             expect(result).to.equal("object1");
         });
+        
+        it("poll item from queue", () => {
+            const queue = new Queue();
+            queue.enqueue("object1");
+            queue.enqueue("object2");
+            queue.enqueue("object3");
+            const pollResult = queue.poll();
+            const indexZero = queue.peek();
+            const size = queue.size();
+            expect(pollResult).to.equal("object1");
+            expect(indexZero).to.equal("object2");
+            expect(size).to.equal(2);
+        });
     })
 
     // describe("Factory", () => {
