@@ -1,6 +1,8 @@
 import { expect } from "chai";
 import { Queue } from "../lib/Queue";
 import { Stack } from "../lib/Stack";
+import { DataStructures } from "../lib/DataStructuresEnum";
+import { DataStructureFactory } from "../lib/DataStructureFactory";
 
 describe("Data structures", () => {
     describe("Queue", () => {
@@ -107,11 +109,17 @@ describe("Data structures", () => {
         });
     });
 
-    // describe("Factory", () => {
-    //     it("can create Queue", () => {
-    //         const structureType = DataStructures.Queue;
-    //         const result = DataStructureFactory.create(structureType);
-    //         expect(result).to.be.an.instanceOf(Queue);
-    //     })
-    // })
+    describe("Factory", () => {
+        it("can create Queue", () => {
+            const structureType = DataStructures.Queue;
+            const result = DataStructureFactory.create(structureType);
+            expect(result).to.be.an.instanceOf(Queue);
+        });
+
+        it("can create Stack", () => {
+            const structureType = DataStructures.Stack;
+            const result = DataStructureFactory.create(structureType);
+            expect(result).to.be.an.instanceOf(Stack);
+        });
+    });
 })
