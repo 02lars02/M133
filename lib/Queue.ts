@@ -7,7 +7,7 @@ export class Queue implements IDataScructure {
         return this.queue.length;
     }
 
-    public add(object: any): void {
+    public enqueue(object: any): void {
         this.queue.push(object);
     }
 

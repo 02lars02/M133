@@ -1,5 +1,5 @@
 export interface IDataScructure {
     size(): number;
-    add(any): void;
+    enqueue(any): void;
     peek(): any;
 }
