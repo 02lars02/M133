@@ -15,7 +15,6 @@ describe("Data structures", () => {
             const result = queue.size();
             expect(result).to.equal(1);
         });
-
         
         it("get last added object", () => {
             const queue = new Queue();
@@ -23,7 +22,7 @@ describe("Data structures", () => {
             queue.enqueue("object2");
             queue.enqueue("object3");
             const result = queue.peek();
-            expect(result).to.equal("object3");
+            expect(result).to.equal("object1");
         });
     })
 

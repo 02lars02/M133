@@ -12,7 +12,6 @@ export class Queue implements IDataScructure {
     }
 
     public peek(): any {
-        const lastIndex = this.queue.length - 1;
-        return this.queue[lastIndex];
+        return this.queue[0];
     }
 }
